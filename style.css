@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #935858;
+    scrollbar-face-color: #b46868;
+
+}
+
+.wrapper {
+   position: relative;
+    background-color: rgba(5, 33, 33, 0.89);
+}
+
+.wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+
+.container {
+    width: 1280px;
+    margin: 0 auto
+}
+
+.header {
+    margin: 0 auto;
+    background-color: #007f8b;
+    padding: 20px 0;
+}
+
+.header h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.header-logo {
+    display: none;
+}
+
+.task {
+    flex-basis: 30%;
+    backdrop-filter: blur(5px);
+    /*background-color: rgba(241, 181, 116, 0.72);*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px 20px;
+
+}
+
+
+.todo {
+    background-color: rgba(243, 69, 69, 0.46);
+}
+
+.done {
+
+    background-color: rgba(168, 255, 168, 0.49);
+}
+
+.in-progress {
+    background-color: rgba(241, 181, 116, 0.72);
+}
+
+.task-list {
+    height: 63vh;
+    overflow-y: auto;
+    /*overflow-y: scroll;*/
+}
+
+button {
+    margin-top: 10px;
+    background-color: #7d7f86;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.btn-add {
+    background-color: #ffffff;
+color: black;
+}
+
+.task h2 {
+    color: white;
+}
+.fa-xmark {
+    font-size: 14px;
+}
+
+.tasks-list {;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.task-item {
+    position: relative;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.99);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px 20px 20px;
+    margin: 10px 20px 0 0;
+
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /*background-color: #e3e3df;*/
+    color: #3b3b3b;;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.task-title {
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.task-list li {
+    list-style: none;
+}
+
+.footer {
+    background-color: #007f8b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

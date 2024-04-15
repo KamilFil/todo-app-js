@@ -6,47 +6,105 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TodoAPP</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="app.js"></script>
+    <script src="https://kit.fontawesome.com/e1693a6581.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<section class="tasks">
-    <form>
-        <label>
-            <input type="text" name="task" placeholder="Wpisz zadanie"/>
-        </label>
-        <button id="add-task" type="submit">Dodaj</button>
-    </form>
-    <div class="tasks-list"></div>
-    <div class="task-todo">
-        <h2>Zadania do zrobienia</h2>
-        <ul class="task-items">
-            <li class="task-item">
-                <p class="task-title">Tytuł</p>
-                <p class="task-desc">Opis</p>
-                <button>Usuń</button>
-            </li>
-        </ul>
+<div class="wrapper">
+    <img src="/img/todo-dream.jpg" alt="Background" class="bg">
+<header class="header">
+    <div class="container">
+    <h1>TodoAPP</h1>
+    <div class="header-logo">
+        <img src="img/logo.png" alt="Logo"/>
     </div>
-    <div class="task-inprogress">
-        <h2>Zadania w trakcie</h2>
+
+</div>
+</header>
+<section class="tasks">
+    <div class="container">
+    <div class="tasks-list">
+    <div class="task todo">
+        <h2>Zadania do zrobienia</h2>
         <ul class="task-list">
             <li class="task-item">
                 <p class="task-title">Tytuł</p>
-                <p class="task-desc">Opis</p>
-                <button>Usuń</button>
+                <p class="task-desc">Musisz zrobic to i to</p>
+                <div>
+                    <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+
             </li>
         </ul>
+        <button class="btn-add" type="submit">Dodaj zadanie</button>
     </div>
-    <div class="task-inprogress">
+    <div class="task in-progress">
+        <h2>Zadania w trakcie</h2>
+        <ul class="task-list ">
+            <li class="task-item ">
+                <p class="task-title">Tytawdwad wd awd wa aw d awd wa dwd awd wa dwa duł</p>
+                <p class="task-desc">Musisz zrobic to i toMusisz zrobic to i toMusisz zrobic to i toMusisz zrobic to i toMusisz zrobic to i toMusisz zrobic to i to</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+        </ul>
+        <button class="btn-add" type="submit">Dodaj zadanie</button>
+    </div>
+    <div class="task done">
         <h2>Zadania zrobione</h2>
         <ul class="task-list">
             <li class="task-item">
                 <p class="task-title">Tytuł</p>
                 <p class="task-desc">Opis</p>
-                <button>Usuń</button>
+                <a class="btn-close"><i class="fa-solid fa-xmark"></i></a>
             </li>
         </ul>
+        <button class="btn-add" type="submit">Dodaj zadanie</button>
+    </div>
+    </div>
     </div>
 </section>
+<footer class="footer">
+    <div class="container">
+    <p>TodoAPP &copy; 2021</p>
+    </div>
+</footer>
+</div>
 </body>
 </html>
