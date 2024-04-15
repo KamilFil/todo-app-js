@@ -9,6 +9,44 @@
 </head>
 
 <body>
-    <h1>TodoAPP</h1>
+<section class="tasks">
+    <form>
+        <label>
+            <input type="text" name="task" placeholder="Wpisz zadanie"/>
+        </label>
+        <button id="add-task" type="submit">Dodaj</button>
+    </form>
+    <div class="tasks-list"></div>
+    <div class="task-todo">
+        <h2>Zadania do zrobienia</h2>
+        <ul class="task-items">
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <button>Usuń</button>
+            </li>
+        </ul>
+    </div>
+    <div class="task-inprogress">
+        <h2>Zadania w trakcie</h2>
+        <ul class="task-list">
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <button>Usuń</button>
+            </li>
+        </ul>
+    </div>
+    <div class="task-inprogress">
+        <h2>Zadania zrobione</h2>
+        <ul class="task-list">
+            <li class="task-item">
+                <p class="task-title">Tytuł</p>
+                <p class="task-desc">Opis</p>
+                <button>Usuń</button>
+            </li>
+        </ul>
+    </div>
+</section>
 </body>
 </html>
