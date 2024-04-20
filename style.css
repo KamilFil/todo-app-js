@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
+i {
+    pointer-events: none;
+}
 
+.empty-task{
+    color: white;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #935858;
     scrollbar-face-color: #b46868;
-
+    width: 100%;
 }
 
 .wrapper {
-   position: relative;
-    background-color: rgba(5, 33, 33, 0.89);
+    position: relative;
+    background-color: rgba(5, 29, 31, 0.91);
 }
 
 .wrapper img {
@@ -32,52 +38,44 @@ body {
 
 .container {
     width: 1280px;
-    margin: 0 auto
+    margin: 0 auto;
+    max-width: 100%;
+
 }
 
 .header {
+    max-width: 100%;
     margin: 0 auto;
-    background-color: #007f8b;
+    background-color: rgba(4, 34, 37, 0.74);
     padding: 20px 0;
 }
 
 .header h1 {
     color: #fff;
-    text-align: center;
 }
 
 .header-logo {
     display: none;
 }
 
-.task {
-    flex-basis: 30%;
-    backdrop-filter: blur(5px);
-    /*background-color: rgba(241, 181, 116, 0.72);*/
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 20px 20px;
-
+.task-list.todo {
+    background-color: rgba(250, 111, 111, 0.76);
 }
 
-
-.todo {
-    background-color: rgba(243, 69, 69, 0.46);
-}
-
-.done {
-
+.task-list.done {
     background-color: rgba(168, 255, 168, 0.49);
 }
 
-.in-progress {
-    background-color: rgba(241, 181, 116, 0.72);
+.task-list.in-progress {
+    background-color: rgba(236, 174, 93, 0.9);
 }
 
 .task-list {
+    margin-top: 20px;
     height: 63vh;
     overflow-y: auto;
-    /*overflow-y: scroll;*/
+    padding: 20px;
+    border-radius: 5px;
 }
 
 button {
@@ -91,9 +89,9 @@ button {
 
 }
 
-.btn-add {
-    background-color: #ffffff;
-color: black;
+.task-add-btn{
+    background-color: white;
+color:black;
 }
 
 .task h2 {
@@ -103,12 +101,29 @@ color: black;
     font-size: 14px;
 }
 
+.tasks {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
 .tasks-list {;
     display: flex;
+    width:1280px ;
+    overflow-x: auto;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
     padding: 60px 30px;
+}
+
+
+
+.task {
+    width: 32%;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 20px 20px;
 }
 
 .task-item {
@@ -117,17 +132,15 @@ color: black;
     background-color: rgba(255, 255, 255, 0.99);
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px 40px 20px 20px;
-    margin: 10px 20px 0 0;
-
+    padding: 20px 20px 60px 20px;
+    margin: 10px 0;
 }
 
-.btn-close {
+.remove-task {
     position: absolute;
     top: 10px;
     right: 10px;
-    /*background-color: #e3e3df;*/
-    color: #3b3b3b;;
+    color: #3b3b3b;
     border: none;
     font-size: 12px;
     padding: 5px 10px;
@@ -146,9 +159,102 @@ color: black;
     list-style: none;
 }
 
+
+
+.modal-add {
+    position: relative;
+}
+
+
+
+.modal-task {
+    display: none;
+}
+
+.modal-task.active{
+    display: flex;
+}
+
+.modal-task-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.51);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.modal-task-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e3e3df;
+    color: #3b3b3b;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-task-item {
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 40px;
+    z-index:999;
+}
+
+.modal-task-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modal-task-content input {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.modal-task-content textarea {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 100px;
+    max-width: 100%;
+}
+
+.modal-task-content button {
+    background-color: rgba(4, 34, 37, 0.93);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .footer {
-    background-color: #007f8b;
+    background-color: rgba(4, 34, 37, 0.74);
     color: #fff;
     padding: 20px 0;
     text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
 }
