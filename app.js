@@ -1,6 +1,6 @@
-import { TodoManager } from './todoManager.js';
-import { dragManager} from "./dragMenager.js";
-import {createTaskList} from "./createTaskList.js";
+import { TodoManager } from './utils/todoManager.js';
+import { dragManager} from "./utils/dragMenager.js";
+import {createTaskList} from "./utils/components/createTaskList.js";
 
 const todo = new TodoManager();
 const task = todo.getTasks()
