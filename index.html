@@ -6,9 +6,70 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TodoAPP</title>
+    <link rel="stylesheet" href="style.css">
+    <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script>
+    <script src="https://kit.fontawesome.com/e1693a6581.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<div class="wrapper">
+    <img src="/img/todo-dream.jpg" alt="Background" class="bg">
+<header class="header">
+    <div class="container">
     <h1>TodoAPP</h1>
+    <div class="header-logo">
+        <img src="/img/logo.png" alt="Logo"/>
+    </div>
+</div>
+</header>
+    <section class="modal-task">
+        <div class="modal-task-overlay">
+        <div class="modal-task-item">
+        <div class="modal-task-content">
+        <a class="modal-task-close"><i class="fa-solid fa-xmark"></i></a>
+        <h2>Dodaj zadanie</h2>
+        <form class="modal-task-form">
+                <input type="text" id="task-name" name="task-name" required placeholder="Tytuł zadania">
+                <textarea id="task-desc" name="task-desc" required placeholder="Opis zadania"></textarea>
+            <button type="submit" class="modal-add-btn" >Dodaj zadanie</button>
+        </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="tasks">
+    <div class="tasks-list">
+    <div class="task">
+
+        <ul class="task-list todo" data-cat="todo">
+            <h2>Zadania do zrobienia</h2>
+        </ul>
+        <button class="task-add-btn" type="submit">Dodaj zadanie</button>
+    </div>
+    <div class="task ">
+
+        <ul class="task-list in-progress" data-cat="inprogress">
+            <h2>Zadania w trakcie</h2>
+        </ul>
+
+    </div>
+    <div class="task">
+
+        <ul class="task-list done"  data-cat="done">
+            <h2>Zadania zrobione</h2>
+        </ul>
+
+    </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+    <p>TodoAPP &copy; 2024 - <a href="https://kamil-filip.pl">Kamil Filip</a> </p>
+    </div>
+</footer>
+</div>
+<script src="app.js" type="module"></script>
 </body>
 </html>
